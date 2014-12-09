@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="sportform">
+			<h:panelGrid columns="2">
+
+				
+				<h:outputText value="#{msg.sportIdLabel}" />
+				<h:inputText id="id" value="#{sportBean.sport.id}" />
+
+				<h:outputText value="#{msg.sportNazwaLabel}" />
+				<h:inputText id="nazwa" value="#{sportBean.sport.nazwa}" />
+
+	            <h:outputText value="#{msg.sportDataRejestracjiLabel}" />
+				<h:inputText id="dataRejestracji" value="#{sportBean.sport.dataRejestracji}" />
+
+				<h:outputText value="#{msg.sportIloscLabel}" />
+				<h:selectOneRadio id="ilosc" value="#{sportBean.sport.ilosc}" >
+					<f:selectItem itemValue="jednoosobowe" itemLabel="Jednoosobowe" />
+				   	<f:selectItem itemValue="wieloosobowe" itemLabel="Wieloosobowe" />
+				   	<f:selectItem itemValue="druzynowe" itemLabel="Druzynowe" />
+				</h:selectOneRadio>
+
+				<h:outputText value="#{msg.sportKategoriaLabel}" />
+				<h:selectOneMenu id="kategoria" value="#{sportBean.sport.kategoria}" >
+					<f:selectItem itemValue="halowy" itemLabel="halowy" />
+				   	<f:selectItem itemValue="letni" itemLabel="letni" />
+				   	<f:selectItem itemValue="zimowy" itemLabel="zimowy" />
+				   	<f:selectItem itemValue="wodny" itemLabel="wodny" />
+				   	<f:selectItem itemValue="powietrzny" itemLabel="powietrzny" />
+				   	<f:selectItem itemValue="walki" itemLabel="walki" />
+				   	<f:selectItem itemValue="planszowy" itemLabel="planszowy" />
+				   	<f:selectItem itemValue="ekstremalny" itemLabel="ekstremalny" />
+				</h:selectOneMenu>
+
+				<h:outputText value="#{msg.sportWynikLabel}" />
+				<h:selectOneListbox id="wynik" value="#{sportBean.sport.wynik}" >
+				   	<f:selectItem itemValue="czas" itemLabel="czas" />
+				   	<f:selectItem itemValue="odleglosc" itemLabel="odleglosc" />
+				   	<f:selectItem itemValue="dlugosc" itemLabel="dlugosc" />
+				   	<f:selectItem itemValue="ciezar" itemLabel="ciezar" />
+				   <!-- 	<f:selectItem itemValue="ogloszenie zwyciezcy" itemLabel="ogloszenie zwyciezcy" /> -->
+				   	<f:selectItem itemValue="inne" itemLabel="inne" />
+				</h:selectOneListbox>
+				
+				<h:outputText value="#{msg.sportOpisLabel}" />
+				<h:inputTextarea cols="30" rows="10"  id="opis" value="#{sportBean.sport.opis}" />
+			</h:panelGrid>
+
+			<h:commandButton value="#{msg.sportFormOKButton}"
+				action="#{sportBean.addSport}" />
+				
+			<h:panelGrid>
+				<h:messages showDetail="#{true}" showSummary="#{false}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
