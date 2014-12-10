@@ -14,6 +14,7 @@ public class AWF {
 	public void addSport(Sport sport) {
 		Sport newSport = new Sport();
 
+		newSport.setId(sport.getId());
 		newSport.setNazwa(sport.getNazwa());
 		newSport.setDataRejestracji(sport.getDataRejestracji());
 		newSport.setIlosc(sport.getIlosc());

@@ -9,10 +9,10 @@
 	
     <h:form>
     
-     <h:dataTable value="#{sportBean.allSports}" var="item">
+     <h:dataTable border="5" bgcolor="Silver" value="#{sportBean.allSports}" var="item">
       <f:facet name="header">#{msg.sportAllLabel}</f:facet>
       
-      <h:column>
+      <h:column >
         <f:facet name="header">#{msg.sportIdLabel}</f:facet>
         #{item.id}
       </h:column>

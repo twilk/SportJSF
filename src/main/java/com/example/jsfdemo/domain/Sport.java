@@ -1,6 +1,8 @@
 package com.example.jsfdemo.domain;
 
 
+import java.util.Date;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
@@ -10,7 +12,7 @@ public class Sport{
 	
 	private int id=0;
 	private String nazwa = "";
-	private String dataRejestracji="1992-10-19";
+	private Date dataRejestracji;
 	private String ilosc = "";
 	private String kategoria = "";
 	private String wynik = "";
@@ -29,10 +31,10 @@ public class Sport{
 	public void setNazwa(String nazwa) {
 		this.nazwa = nazwa;
 	}
-	public String getDataRejestracji() {
+	public Date getDataRejestracji() {
 		return dataRejestracji;
 	}
-	public void setDataRejestracji(String dataRejestracji) {
+	public void setDataRejestracji(Date dataRejestracji) {
 		this.dataRejestracji = dataRejestracji;
 	}
 	public String getIlosc() {

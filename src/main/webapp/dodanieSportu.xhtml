@@ -3,6 +3,10 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	
 	template="/templates/default.xhtml">
 	<ui:define name="content">
 		<h:form id="sportform">
@@ -16,8 +20,12 @@
 				<h:inputText id="nazwa" value="#{sportBean.sport.nazwa}" />
 
 	            <h:outputText value="#{msg.sportDataRejestracjiLabel}" />
-				<h:inputText id="dataRejestracji" value="#{sportBean.sport.dataRejestracji}" />
-
+				<rich:calendar value="#{sportBean.sport.dataRejestracji}"
+					id="calendar" datePattern="dd.MM.yyyy" showApplyButton="#{true}"
+					cellWidth="24px" cellHeight="22px" style="width:200px">
+					<a4j:ajax render="messages" execute="@this" />
+				</rich:calendar>
+				
 				<h:outputText value="#{msg.sportIloscLabel}" />
 				<h:selectOneRadio id="ilosc" value="#{sportBean.sport.ilosc}" >
 					<f:selectItem itemValue="jednoosobowe" itemLabel="Jednoosobowe" />
