@@ -20,11 +20,14 @@
       <h:column>
         <f:facet name="header">#{msg.sportNazwaLabel}</f:facet>
         #{item.nazwa}
+        
       </h:column>
       
       <h:column>
         <f:facet name="header">#{msg.sportDataRejestracjiLabel}</f:facet>
-        #{item.dataRejestracji}
+      <h:outputText value="#{item.dataRejestracji}" >
+         <f:convertDateTime pattern="dd-mm-yyyy" />
+      </h:outputText>
       </h:column>      
       
       <h:column>

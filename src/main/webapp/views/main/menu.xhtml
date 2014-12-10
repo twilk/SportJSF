@@ -7,18 +7,13 @@
 	<h:form>
 	  <ul>
 		<li>
-		  <h:commandLink action="home?faces-redirect=true">
-			<h:outputText value="#{msg.linkHome}" />
-		  </h:commandLink>
+		  <h:commandButton value="#{msg.linkHome}" action="home?faces-redirect=true"/>
 		</li>
 		<li>
-		  <h:commandLink action="dodanieSportu?faces-redirect=true">
-			<h:outputText value="#{msg.sportAddLabel}" />
-		  </h:commandLink></li>
+		  <h:commandButton value="#{msg.sportAddLabel}" action="dodanieSportu?faces-redirect=true"/>
+		</li>
 		<li>
-		  <h:commandLink action="showPersons?faces-redirect=true">
-			 <h:outputText value="#{msg.sportAllLabel}" />
-		  </h:commandLink>
+		  <h:commandButton value="#{msg.sportAllLabel}" action="showPersons?faces-redirect=true"/>
 		</li>
 	</ul>
    </h:form>
