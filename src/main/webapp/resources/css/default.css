@@ -1,18 +1,23 @@
 body {
    margin: 10;
    padding: 10;
-   background-color:  Gray;
-   font-family: Verdana, sans-serif;
+   background-color: navy;
+   background-image: url("http://www.aisd.net/AISD/Portals/165/runners.gif");
+   background-size: 70px 70px;
+   background-repeat: repeat;
+   background-position: right top;
+   
+   font-family:fantasy, sans-serif;
    font-size: 0.9em;
    
 }
 
 .heading {
   padding: 10px;
-  background: teal;
+  background: #9A1AFA;
   border: 1px solid blue;
-  border-radius: 20px;
-  font-size: 1.4em;
+  border-radius: 30px;
+  font-size: 2.4em;
   font-style: italic;
   font-family:sans-serif ;
   text-align: center;
@@ -28,13 +33,13 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  border: thin solid blue;
-  border-radius: 20px;
+  border: thin solid;
+  border-radius: 30px;
   position: absolute;
   left: 10px;
   height: 80%;
   width: 200px;
-  background: #AAAAAA;
+  /* background: navy; */
   top: 90px;
 }
 .menu span {
@@ -54,11 +59,14 @@ body {
   padding-left: 20px;
   padding-bottom: 20px;
   border: thin solid blue;
-  border-radius: 20px;
-  background: #25FF34;	
+  border-radius: 30px;
+  
+  background: #9A1AFA;
+  
   position:absolute;
   left: 225px; 
   right: 65px;
   top: 90px;
   height: 80%;
 }
+
